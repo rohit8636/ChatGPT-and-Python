@@ -19,7 +19,7 @@ completion = client.chat.completions.create(
         },
     ],
     max_completion_tokens=100,
-    n=1
+    n=1 # because we use n=1, so the response required is at choices[0]
 )
 
 print(completion.choices[0].message.content)
